@@ -1,0 +1,28 @@
+
+
+<table border="1" style="border-collapse: collapse">
+        <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>title</th>
+            <th>title</th>
+            <th>title</th>
+        </tr>
+
+        <% products.each do |product| %>
+            <td><%= product.id %> </td>
+            <td><%= product.name %> </td>
+            <td><%= product.price %> </td>
+            <% end %>
+
+            <% products.image_urls.each do |image| %>
+            <td><%= image.image_url_id %> </td>
+            <% end %>
+
+            <% products.sizes.each do |size| %>
+                <td><%= size.size %> </td>
+                <% end %>
+            </tr>
+
+        
+        </table>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_30_154053) do
+ActiveRecord::Schema.define(version: 2019_10_30_163006) do
 
   create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "brand", limit: 20
@@ -106,7 +106,7 @@ ActiveRecord::Schema.define(version: 2019_10_30_154053) do
   end
 
   create_table "stocks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "stock", limit: 3
+    t.integer "stock", limit: 1
     t.bigint "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -114,7 +114,7 @@ ActiveRecord::Schema.define(version: 2019_10_30_154053) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", limit: 20
+    t.string "name", limit: 50
     t.string "email"
     t.string "address", limit: 60
     t.string "password", limit: 12
